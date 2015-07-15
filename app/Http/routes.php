@@ -53,3 +53,13 @@ Route::get('/c/v/{id}', 'TestController@view');
  ***************************/
 Route::get('/d', 'DBtestController@index');
 Route::get('/d/id/{id}', 'DBtestController@test1');
+
+/***************************
+ * 測試基本的 model
+ ***************************/
+// 測試呼叫
+Route::get('/m', 'ModelTestController@index');
+// 測試使用 db
+Route::get('/m/db', 'ModelTestController@db');
+// 測試自己建目錄
+Route::get('/m/chdir', 'ModelTestController@change_dir');
