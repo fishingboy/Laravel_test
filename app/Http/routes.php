@@ -47,3 +47,9 @@ Route::get('/test_view4', function () {
 Route::get('/c/{id}', 'TestController@index');
 Route::get('/c/index/{id}', 'TestController@index');
 Route::get('/c/v/{id}', 'TestController@view');
+
+/***************************
+ * 測試基本的資料庫存取
+ ***************************/
+Route::get('/d', 'DBtestController@index');
+Route::get('/d/id/{id}', 'DBtestController@test1');
