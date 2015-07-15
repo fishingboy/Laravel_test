@@ -20,7 +20,9 @@ Route::get('/test', function () {
     return "test!!";
 });
 
-// 測試基本的 view
+/***************************
+ * 測試基本的 view
+ ***************************/
 Route::get('/test_view', function () {
     return view('test.1');
 });
@@ -38,3 +40,10 @@ Route::get('/test_view3', function () {
 Route::get('/test_view4', function () {
     return view('test.4', ['name' => 'Leo']);
 });
+
+/***************************
+ * 測試基本的 Controller
+ ***************************/
+Route::get('/c/{id}', 'TestController@index');
+Route::get('/c/index/{id}', 'TestController@index');
+Route::get('/c/v/{id}', 'TestController@view');
